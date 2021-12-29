@@ -75,6 +75,10 @@ public:
                                            int& position) override;
   PVR_ERROR SetRecordingPlayCount(const kodi::addon::PVRRecording& recinfo, int playcount) override;
 
+  // comm skip
+  PVR_ERROR GetRecordingEdl(const kodi::addon::PVRRecording& recording,
+                            std::vector<kodi::addon::PVREDLEntry>& edl) override;
+
   /* Timer handling */
   PVR_ERROR GetTimersAmount(int& amount) override;
   PVR_ERROR GetTimers(kodi::addon::PVRTimersResultSet& results) override;
@@ -122,6 +126,7 @@ private:
   std::string m_sBackendVersion;
   time_t m_BackendUTCoffset = 0;
   time_t m_BackendTime = 0;
+  std::string _streamFileName; // the name of the stream file
 
   std::mutex m_ChannelCacheMutex;
   std::vector<cChannel*>
