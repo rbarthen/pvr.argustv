@@ -873,14 +873,14 @@ PVR_ERROR cPVRClientArgusTV::SetRecordingPlayCount(const kodi::addon::PVRRecordi
 PVR_ERROR cPVRClientArgusTV::GetRecordingEdl(const kodi::addon::PVRRecording& recording,
                                              std::vector<kodi::addon::PVREDLEntry>& edl)
 {
-  std::string m_streamFileName; // the name of the stream file
-  if (!FindRecEntry(recording.GetRecordingId(), m_streamFileName))
+  std::string streamFileName; // the name of the stream file
+  if (!FindRecEntry(recording.GetRecordingId(), streamFileName))
     return PVR_ERROR_SERVER_ERROR;
 
-  if (!m_streamFileName.empty()) // read the edl for the current stream file
+  if (!streamFileName.empty()) // read the edl for the current stream file
   {
     // see if edl file for currently streaming recording exists
-    std::string theEdlFile = m_streamFileName;
+    std::string theEdlFile = streamFileName;
     // swap .wtv extension for .edl
     std::string::size_type result = theEdlFile.find_last_of('.');
     if (std::string::npos != result)
