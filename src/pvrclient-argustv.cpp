@@ -21,6 +21,7 @@
 #include "utils.h"
 
 #include <kodi/General.h>
+#include <kodi/tools/StringUtils.h>
 #include <chrono>
 #include <map>
 #include <thread>
@@ -872,13 +873,14 @@ PVR_ERROR cPVRClientArgusTV::SetRecordingPlayCount(const kodi::addon::PVRRecordi
 PVR_ERROR cPVRClientArgusTV::GetRecordingEdl(const kodi::addon::PVRRecording& recording,
                                              std::vector<kodi::addon::PVREDLEntry>& edl)
 {
-  if (!FindRecEntry(recording.GetRecordingId(), _streamFileName))
+  std::string m_streamFileName; // the name of the stream file
+  if (!FindRecEntry(recording.GetRecordingId(), m_streamFileName))
     return PVR_ERROR_SERVER_ERROR;
 
-  if (!_streamFileName.empty()) // read the edl for the current stream file
+  if (!m_streamFileName.empty()) // read the edl for the current stream file
   {
     // see if edl file for currently streaming recording exists
-    std::string theEdlFile = _streamFileName;
+    std::string theEdlFile = m_streamFileName;
     // swap .wtv extension for .edl
     std::string::size_type result = theEdlFile.find_last_of('.');
     if (std::string::npos != result)
@@ -901,7 +903,7 @@ PVR_ERROR cPVRClientArgusTV::GetRecordingEdl(const kodi::addon::PVRRecording& re
         size_t nidx = svals.find_last_not_of("\r");
         svals.erase(svals.npos == nidx ? 0 : ++nidx); // trim windows /r if its there
 
-        std::vector<std::string> vals = Utils::Split(svals, "\t"); // split on tabs
+        std::vector<std::string> vals = kodi::tools::StringUtils::Split(svals, "\t"); // split on tabs
         if (vals.size() == 3)
         {
           kodi::addon::PVREDLEntry entry;
