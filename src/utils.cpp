@@ -164,8 +164,6 @@ bool WriteFileContents(std::string const& strFileName, const std::string& strCon
   return false;
 }
 
-} /* namespace Utils */
-
 // transform [\\nascat\qrecordings\NCIS\2012-05-15_20-30_SBS 6_NCIS.ts]
 // into      [smb://user:password@nascat/qrecordings/NCIS/2012-05-15_20-30_SBS 6_NCIS.ts]
 std::string ToCIFS(std::string& UNCName)
