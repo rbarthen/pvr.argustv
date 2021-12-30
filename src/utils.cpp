@@ -18,11 +18,6 @@
 #include <kodi/General.h>
 #include <string>
 
-
-#include <kodi/Filesystem.h>
-#include <stdio.h>
-
-
 namespace Json
 {
 void printValueTree(const Json::Value& value, const std::string& path)
