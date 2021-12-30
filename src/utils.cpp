@@ -117,48 +117,6 @@ std::string b64_encode(unsigned char const* in, unsigned int in_len, bool urlEnc
 
 } //Namespace BASE64
 
-// return the directory from the input file path
-std::string GetDirectoryPath(std::string const& path)
-{
-  size_t found = path.find_last_of("/\\");
-  if (found != std::string::npos)
-    return path.substr(0, found);
-  else
-    return path;
-}
-
-bool ReadFileContents(std::string const& strFileName, std::string& strContent)
-{
-  kodi::vfs::CFile fileHandle;
-  if (fileHandle.OpenFile(strFileName))
-  {
-    std::string buffer;
-    while (fileHandle.ReadLine(buffer))
-      strContent.append(buffer);
-    return true;
-  }
-  return false;
-}
-
-bool WriteFileContents(std::string const& strFileName, const std::string& strContent)
-{
-  kodi::vfs::CFile fileHandle;
-  if (fileHandle.OpenFileForWrite(strFileName, true))
-  {
-    int rc = fileHandle.Write(strContent.c_str(), strContent.length());
-    if (rc)
-    {
-      kodi::Log(ADDON_LOG_DEBUG, "wrote file %s", strFileName.c_str());
-    }
-    else
-    {
-      kodi::Log(ADDON_LOG_ERROR, "can not write to %s", strFileName.c_str());
-    }
-    return rc >= 0;
-  }
-  return false;
-}
-
 // transform [\\nascat\qrecordings\NCIS\2012-05-15_20-30_SBS 6_NCIS.ts]
 // into      [smb://user:password@nascat/qrecordings/NCIS/2012-05-15_20-30_SBS 6_NCIS.ts]
 std::string ToCIFS(std::string& UNCName)
