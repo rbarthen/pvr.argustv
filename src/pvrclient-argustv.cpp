@@ -733,7 +733,7 @@ PVR_ERROR cPVRClientArgusTV::GetRecordings(bool deleted,
                 tag.SetDirectory("");
               }
 
-			  std::vector<std::string> titles = Utils::Split(recording.Title(), " - "); 
+			  std::vector<std::string> titles = kodi::tools::StringUtils::Split(recording.Title(), " - "); 
 			  std::string subTitle = "";
 			  if (titles.size() > 1){
                  subTitle = titles[1];
