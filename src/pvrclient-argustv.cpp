@@ -735,9 +735,9 @@ PVR_ERROR cPVRClientArgusTV::GetRecordings(bool deleted,
 
               std::vector<std::string> titles = kodi::tools::StringUtils::Split(recording.Title(), " - "); 
               std::string subTitle = "";
-              if (titles.size() > 1){
+              if (titles.size() > 1)
                 subTitle = titles[1];
-              }
+                
               std::string displayTitle = recordinggroup.ProgramTitle();
               //if user set configuration to show series and episode and series and episode exist, append them to the title
               if (m_base.GetSettings().ShowSeriesEpisode() &&  recording.SeriesNumber() > 0 && recording.EpisodeNumber() > 0)
