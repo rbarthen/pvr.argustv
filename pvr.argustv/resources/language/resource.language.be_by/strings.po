@@ -60,3 +60,7 @@ msgstr "Затрымка пасля наладкі (мс)"
 msgctxt "#30007"
 msgid "Single recordings in folder"
 msgstr "Адзін запіс у каталозе"
+
+msgctxt "#30008"
+msgid "Add series and episode to title"
+msgstr "Add series and episode to title"

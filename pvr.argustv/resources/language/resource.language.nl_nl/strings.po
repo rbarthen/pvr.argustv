@@ -60,3 +60,7 @@ msgstr "Wachttijd na afstemmen (ms)"
 msgctxt "#30007"
 msgid "Single recordings in folder"
 msgstr "Enkelvoudige opnamen in map"
+
+msgctxt "#30008"
+msgid "Add series and episode to title"
+msgstr "Add series and episode to title"

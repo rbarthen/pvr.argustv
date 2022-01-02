@@ -59,3 +59,7 @@ msgstr "Oedi ar ôl tiwnio (m'au)"
 msgctxt "#30007"
 msgid "Single recordings in folder"
 msgstr "Recordiadau sengl yn y ffolder hon"
+
+msgctxt "#30008"
+msgid "Add series and episode to title"
+msgstr "Add series and episode to title"

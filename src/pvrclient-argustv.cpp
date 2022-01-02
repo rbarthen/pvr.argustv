@@ -739,8 +739,8 @@ PVR_ERROR cPVRClientArgusTV::GetRecordings(bool deleted,
                  subTitle = titles[1];
 			  }
               std::string displayTitle = recordinggroup.ProgramTitle();
-              if (recording.SeriesNumber() > 0 && recording.EpisodeNumber() > 0)
-              {
+        if (m_base.GetSettings().ShowSeriesEpisode() &&  recording.SeriesNumber() > 0 && recording.EpisodeNumber() > 0)
+        {
                 std::string series = std::to_string(recording.SeriesNumber());
                 if (recording.SeriesNumber() < 10)
 				{

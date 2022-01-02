@@ -59,3 +59,7 @@ msgstr "Zniyskorzynie po szaltrowaniu (ms)"
 msgctxt "#30007"
 msgid "Single recordings in folder"
 msgstr "Ekstra folder dlŏ kŏżdygo nagraniŏ"
+
+msgctxt "#30008"
+msgid "Add series and episode to title"
+msgstr "Add series and episode to title"

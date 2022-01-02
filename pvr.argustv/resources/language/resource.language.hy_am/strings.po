@@ -59,3 +59,7 @@ msgstr "Սպասում ձևափոխումից հետո (մվ)"
 msgctxt "#30007"
 msgid "Single recordings in folder"
 msgstr "Միայնակ ձայնագրություններ թղթապանակում"
+
+msgctxt "#30008"
+msgid "Add series and episode to title"
+msgstr "Add series and episode to title"
