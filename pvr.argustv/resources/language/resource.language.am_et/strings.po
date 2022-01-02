@@ -60,3 +60,7 @@ msgstr "ማዘግያ ከ ተገኘ በኋላ (ሚሰ)"
 msgctxt "#30007"
 msgid "Single recordings in folder"
 msgstr "ነጠላ መቅረጫ በ ፎልደር ውስጥ"
+
+msgctxt "#30008"
+msgid "Show series and episode in title when available"
+msgstr "Show series and episode in title when available"

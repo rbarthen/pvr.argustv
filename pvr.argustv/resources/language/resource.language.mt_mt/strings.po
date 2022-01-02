@@ -61,5 +61,5 @@ msgid "Single recordings in folder"
 msgstr "Rekordings individwali fil-fowlder"
 
 msgctxt "#30008"
-msgid "Add series and episode to title"
-msgstr "Add series and episode to title"
+msgid "Show series and episode in title when available"
+msgstr "Show series and episode in title when available"
