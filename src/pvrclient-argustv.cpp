@@ -708,8 +708,8 @@ PVR_ERROR cPVRClientArgusTV::GetRecordings(bool deleted,
             {
               kodi::addon::PVRRecording tag;
 
-              tag.SetSeriesNumber(PVR_RECORDING_INVALID_SERIES_EPISODE);
-              tag.SetEpisodeNumber(PVR_RECORDING_INVALID_SERIES_EPISODE);
+              tag.SetSeriesNumber(recording.SeriesNumber());
+              tag.SetEpisodeNumber(recording.EpisodeNumber());
 
               tag.SetRecordingId(recording.RecordingId());
               tag.SetChannelName(recording.ChannelDisplayName());
