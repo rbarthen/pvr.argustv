@@ -90,7 +90,7 @@ PVR_ERROR cPVRClientArgusTV::GetCapabilities(kodi::addon::PVRCapabilities& capab
   capabilities.SetSupportsRecordingsRename(true);
   capabilities.SetSupportsRecordingsLifetimeChange(false);
   capabilities.SetSupportsDescrambleInfo(false);
-  capabilities.SetSupportsRecordingEdl(true);
+  capabilities.SetSupportsRecordingEdl(false);
 
   return PVR_ERROR_NO_ERROR;
 }
