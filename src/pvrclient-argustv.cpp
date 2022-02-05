@@ -713,8 +713,8 @@ PVR_ERROR cPVRClientArgusTV::GetRecordings(bool deleted,
               //if neither value is more than 0, there is no value to use or show them
               if (recording.SeriesNumber() > 0 || recording.EpisodeNumber() > 0)
               {
-                tag.SetSeriesNumber(recording.SeriesNumber());
-                tag.SetEpisodeNumber(recording.EpisodeNumber());
+                // tag.SetSeriesNumber(recording.SeriesNumber());
+                // tag.SetEpisodeNumber(recording.EpisodeNumber());
               }
 
               tag.SetRecordingId(recording.RecordingId());
